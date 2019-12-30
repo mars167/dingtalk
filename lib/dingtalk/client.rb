@@ -84,6 +84,10 @@ module Dingtalk
       Api::CallBack.new(@corp)
     end
 
+    def process
+      Api::Process.new(@corp)
+    end
+
     private
       def aes_key
         Base64.decode64(Dingtalk.suite_aes_key + '=')
